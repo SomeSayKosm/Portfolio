@@ -1,4 +1,5 @@
 import NavBarOption from "./NavBarOption"
+import DarkModeToggle from "./DarkModeToggle"
 
 import { useState } from 'react'
 
@@ -12,11 +13,9 @@ const NavBar = () => {
             <NavBarOption>Personal Projects</NavBarOption>
             <NavBarOption>Test</NavBarOption>
         </div>
-    return <div className="text-blue-400">
-        <div>About Me</div>
-        <div>A Game in the Life</div>
-        <div>Personal Projects</div>
-        Test
+        <div className="flex">
+            <DarkModeToggle/>
+        </div>
     </div>
 };
 
