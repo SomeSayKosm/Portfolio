@@ -1,6 +1,5 @@
 import NavBarOption from "./NavBarOption"
 import DarkModeToggle from "./DarkModeToggle"
-
 import { useState } from 'react'
 
 const NavBar = () => {
@@ -14,7 +13,10 @@ const NavBar = () => {
             <NavBarOption>Test</NavBarOption>
         </div>
         <div className="flex">
-            <DarkModeToggle/>
+            <DarkModeToggle
+                darkModeEnabled={darkModeEnabled}
+                setDarkModeEnabled={setDarkModeEnabled}
+            />
         </div>
     </div>
 };
