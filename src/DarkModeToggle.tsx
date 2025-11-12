@@ -18,21 +18,18 @@ type DarkModeToggleProps = {
 };
 
 const DarkModeToggle = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
-
     const colorSettings = darkModeEnabled ? { 
-        slider: "bg-blue-800 justify-end",
+        slider: "bg-blue-800 justify-end border border-blue-500",
         icon: moonIcon,
         iconColor: "text-yellow-200"
      } : {
-        slider: "bg-indigo-400 justify-start",
+        slider: "bg-indigo-400 justify-start border border-indigo-600",
         icon: sunIcon,
         iconColor: "text-yellow-500"
      }
 
-
-
     return <div 
-        className="flex items-center py-1 border border-green-300 cursor-pointer"
+        className="flex items-center py-1 cursor-pointer"
         onClick={() => {
             setDarkModeEnabled(!darkModeEnabled);
         }}    
