@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { useState } from 'react'
 
 type Props = {
   darkModeEnabled: boolean,
@@ -14,7 +13,7 @@ const NavBarOption = ({ darkModeEnabled, children }: Props) => {
     return <div className={clsx(
       "font-medium border-r-2 px-3 py-1 cursor-pointer",
       colorSettings
-      )}>
+    )}>
         {children}
 
     </div>

@@ -7,10 +7,12 @@ function App() {
 
   return (
     <>
-      <NavBar 
-        darkModeEnabled={darkModeEnabled}
-        setDarkModeEnabled={setDarkModeEnabled}
-      />
+      <div className="flex flex-col w-screen items-center">
+        <NavBar 
+          darkModeEnabled={darkModeEnabled}
+          setDarkModeEnabled={setDarkModeEnabled}
+          />
+      </div>
     </>
   )
 }
