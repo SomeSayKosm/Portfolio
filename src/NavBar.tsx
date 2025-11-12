@@ -1,5 +1,6 @@
 import NavBarOption from "./NavBarOption"
 import DarkModeToggle from "./DarkModeToggle"
+import clsx from "clsx"
 
 type DarkModeToggleProps = {
     darkModeEnabled: boolean,
@@ -7,12 +8,17 @@ type DarkModeToggleProps = {
 };
 
 const NavBar = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
-    return <div className="flex justify-between items- w-screen bg-blue-950 border-2 border-blue-600 ">
-        <div className="flex justify-start border border-red-300">
-            <NavBarOption>About Me</NavBarOption>
-            <NavBarOption>A Game in the Life</NavBarOption>
-            <NavBarOption>Personal Projects</NavBarOption>
-            <NavBarOption>Test</NavBarOption>
+
+    const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-indigo-300 text-slate-800 border-violet-400";
+
+    return <div className={clsx("flex justify-between items- w-screen border-2",
+        colorSettings
+    )}>
+        <div className="flex justify-start">
+            <NavBarOption darkModeEnabled={darkModeEnabled}>About Me</NavBarOption>
+            <NavBarOption darkModeEnabled={darkModeEnabled}>A Game in the Life</NavBarOption>
+            <NavBarOption darkModeEnabled={darkModeEnabled}>Personal Projects</NavBarOption>
+            <NavBarOption darkModeEnabled={darkModeEnabled}>Test</NavBarOption>
         </div>
         <div className="flex">
             <DarkModeToggle

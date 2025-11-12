@@ -1,11 +1,20 @@
+import clsx from 'clsx';
 import { useState } from 'react'
 
 type Props = {
+  darkModeEnabled: boolean,
   children?: React.ReactNode;
 };
 
-const NavBarOption = ({ children }: Props) => {
-    return <div className = "font-medium text-slate-300 border-r-2 border-blue-600 px-3 py-1 hover:bg-orange-400 hover:text-slate-800 cursor-pointer">
+
+
+const NavBarOption = ({ darkModeEnabled, children }: Props) => {
+    const colorSettings = darkModeEnabled ? "border-blue-600 hover:bg-orange-500 hover:text-slate-800" : "border-violet-400 hover:bg-rose-400 hover:text-slate-800";
+    
+    return <div className={clsx(
+      "font-medium border-r-2 px-3 py-1 cursor-pointer",
+      colorSettings
+      )}>
         {children}
 
     </div>
