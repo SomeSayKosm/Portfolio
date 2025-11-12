@@ -1,10 +1,12 @@
 import NavBarOption from "./NavBarOption"
 import DarkModeToggle from "./DarkModeToggle"
-import { useState } from 'react'
 
-const NavBar = () => {
-    const [ darkModeEnabled, setDarkModeEnabled ] = useState(false);
+type DarkModeToggleProps = {
+    darkModeEnabled: boolean,
+    setDarkModeEnabled: (darkModeEnabled: boolean) => void,
+};
 
+const NavBar = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
     return <div className="flex justify-between items- w-screen bg-blue-950 border-2 border-blue-600 ">
         <div className="flex justify-start border border-red-300">
             <NavBarOption>About Me</NavBarOption>

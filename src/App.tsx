@@ -6,11 +6,14 @@ import './NavBar'
 import NavBar from './NavBar'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [ darkModeEnabled, setDarkModeEnabled ] = useState(false);
 
   return (
     <>
-      <NavBar />
+      <NavBar 
+        darkModeEnabled={darkModeEnabled}
+        setDarkModeEnabled={setDarkModeEnabled}
+      />
     </>
   )
 }
