@@ -25,6 +25,7 @@ function App() {
           "max-w-6xl w-full min-h-[2000px]",
           colorSettings.content
         )}>
+          <div className="h-64 text-center">Banner Placeholder</div>
           <NavBar 
             darkModeEnabled={darkModeEnabled}
             setDarkModeEnabled={setDarkModeEnabled}
