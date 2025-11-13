@@ -9,7 +9,7 @@ type DarkModeToggleProps = {
 
 const NavBar = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
 
-    const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-indigo-300 text-slate-800 border-violet-400";
+    const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-amber-400 text-slate-800 border-amber-600";
 
     return <nav className={clsx(
         "flex justify-between border-2 w-full",

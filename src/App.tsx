@@ -11,7 +11,7 @@ function App() {
       trim:"bg-slate-950",
     } : 
     {
-      content:"bg-yellow-50",
+      content:"bg-amber-50",
       trim:"bg-indigo-950",
     }
 
