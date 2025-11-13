@@ -11,23 +11,23 @@ const NavBar = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
 
     const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-indigo-300 text-slate-800 border-violet-400";
 
-    return <div className={clsx(
+    return <nav className={clsx(
         "flex justify-between max-w-6xl border-2 w-full",
         colorSettings
     )}>
-        <div className="flex justify-start">
+        <ul className="flex justify-start">
             <NavBarOption darkModeEnabled={darkModeEnabled}>About Me</NavBarOption>
             <NavBarOption darkModeEnabled={darkModeEnabled}>A Game in the Life</NavBarOption>
             <NavBarOption darkModeEnabled={darkModeEnabled}>Personal Projects</NavBarOption>
             <NavBarOption darkModeEnabled={darkModeEnabled}>Test</NavBarOption>
-        </div>
+        </ul>
         <div className="flex">
             <DarkModeToggle
                 darkModeEnabled={darkModeEnabled}
                 setDarkModeEnabled={setDarkModeEnabled}
             />
         </div>
-    </div>
+    </nav>
 };
 
 export default NavBar
