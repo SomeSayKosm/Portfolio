@@ -5,8 +5,6 @@ type Props = {
   children?: React.ReactNode;
 };
 
-
-
 const NavBarOption = ({ darkModeEnabled, children }: Props) => {
     const colorSettings = darkModeEnabled ? "border-blue-600 hover:bg-orange-500 hover:text-slate-800" : "border-amber-600 hover:bg-rose-400 hover:text-slate-800";
     

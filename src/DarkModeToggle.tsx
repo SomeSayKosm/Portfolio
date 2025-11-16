@@ -6,12 +6,12 @@ const moonIcon : IconProp = "fa-solid fa-moon";
 // @ts-ignore
 const sunIcon : IconProp = "fa-solid fa-circle";
 
-type DarkModeToggleProps = {
+type Props = {
     darkModeEnabled: boolean,
     setDarkModeEnabled: (darkModeEnabled: boolean) => void,
 };
 
-const DarkModeToggle = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
+const DarkModeToggle = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
     const colorSettings = darkModeEnabled ? { 
         slider: "bg-blue-800 justify-end border border-blue-500",
         icon: moonIcon,

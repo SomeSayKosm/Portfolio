@@ -2,12 +2,12 @@ import NavBarOption from "./NavBarOption"
 import DarkModeToggle from "./DarkModeToggle"
 import clsx from "clsx"
 
-type DarkModeToggleProps = {
+type Props = {
     darkModeEnabled: boolean,
     setDarkModeEnabled: (darkModeEnabled: boolean) => void,
 };
 
-const NavBar = ({darkModeEnabled, setDarkModeEnabled}: DarkModeToggleProps) => {
+const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
 
     const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-amber-400 text-slate-800 border-amber-600";
 
