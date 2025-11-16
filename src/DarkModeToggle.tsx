@@ -29,7 +29,7 @@ const DarkModeToggle = ({darkModeEnabled, setDarkModeEnabled}: DarkModeTogglePro
      }
 
     return <div 
-        className="flex items-center py-1 cursor-pointer"
+        className="flex items-center py-1 cursor-pointer mr-4"
         onClick={() => {
             setDarkModeEnabled(!darkModeEnabled);
         }}    
