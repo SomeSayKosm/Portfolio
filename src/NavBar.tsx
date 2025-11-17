@@ -1,4 +1,5 @@
 import NavBarOption from "./NavBarOption"
+import NavBarDropdown from "./NavBarDropdown"
 import DarkModeToggle from "./DarkModeToggle"
 import clsx from "clsx"
 
@@ -16,10 +17,10 @@ const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
         colorSettings
     )}>
         <ul className="flex justify-start">
-            <NavBarOption darkModeEnabled={darkModeEnabled}>About Me</NavBarOption>
+            <NavBarOption darkModeEnabled={darkModeEnabled} optionalStyle={"border-r-2"}>About Me</NavBarOption>
             <NavBarOption darkModeEnabled={darkModeEnabled}>A Game in the Life</NavBarOption>
-            <NavBarOption darkModeEnabled={darkModeEnabled}>Personal Projects</NavBarOption>
-            <NavBarOption darkModeEnabled={darkModeEnabled}>Test</NavBarOption>
+            <NavBarDropdown darkModeEnabled={darkModeEnabled} optionalStyle={"border-x-2"} dropdownOptions={["one", "two", "three"]}>Personal Projects</NavBarDropdown>
+            <NavBarOption darkModeEnabled={darkModeEnabled} optionalStyle={"border-r-2"}>Test</NavBarOption>
         </ul>
         <div className="flex">
             <DarkModeToggle
