@@ -6,6 +6,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import NavBar from './NavBar'
+import PostCard from './PostCard';
 
 library.add(fas, far, fab)
 
@@ -36,6 +37,12 @@ function App() {
           <NavBar 
             darkModeEnabled={darkModeEnabled}
             setDarkModeEnabled={setDarkModeEnabled}
+            />
+          <PostCard 
+            darkModeEnabled={darkModeEnabled}
+            title={"Test Title"}
+            date={"June 12, 2024"}
+            content={"This is a test post content."}
             />
         </div>
       </div>
