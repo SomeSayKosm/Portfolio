@@ -13,7 +13,7 @@ const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
     const colorSettings = darkModeEnabled ? "bg-blue-950 text-slate-300 border-blue-600" : "bg-amber-400 text-slate-800 border-amber-600";
 
     return <nav className={clsx(
-        "flex justify-between border-2 w-full sticky top-0",
+        "flex justify-between border-2 w-full sticky top-0 select-none",
         colorSettings
     )}>
         <ul className="flex justify-start">
