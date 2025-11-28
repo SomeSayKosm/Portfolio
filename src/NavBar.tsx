@@ -17,10 +17,17 @@ const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
         colorSettings
     )}>
         <ul className="flex justify-start">
-            <NavBarOption darkModeEnabled={darkModeEnabled} optionalStyle={"border-r-2"}>About Me</NavBarOption>
-            <NavBarOption darkModeEnabled={darkModeEnabled}>A Game in the Life</NavBarOption>
-            <NavBarDropdown darkModeEnabled={darkModeEnabled} optionalStyle={"border-x-2"} dropdownOptions={["one", "two", "three"]}>Personal Projects</NavBarDropdown>
-            <NavBarOption darkModeEnabled={darkModeEnabled} optionalStyle={"border-r-2"}>Test</NavBarOption>
+            <NavBarOption linkUrl={"/about"} optionalStyle={"border-r-2"}>About Me</NavBarOption>
+            <NavBarOption linkUrl={"/a-game-in-the-life"}>A Game in the Life</NavBarOption>
+            <NavBarDropdown 
+                optionalStyle={"border-x-2"} 
+                dropdownOptions={
+                    [{ label: "Project: Blue", linkUrl: "/project-blue" }, 
+                    { label: "two", linkUrl: "/test" }]}
+                >
+                    Personal Projects
+            </NavBarDropdown>
+            <NavBarOption linkUrl={"/test"} optionalStyle={"border-r-2"}>Test</NavBarOption>
         </ul>
         <div className="flex">
             <DarkModeToggle

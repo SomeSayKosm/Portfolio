@@ -1,7 +1,8 @@
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 type Props = {
-  darkModeEnabled: boolean,
+  linkUrl: string,
   optionalStyle?: string,
   children?: React.ReactNode;
 };

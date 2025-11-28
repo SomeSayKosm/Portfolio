@@ -10,7 +10,7 @@ const chevronIcon : IconProp = "fa-solid fa-chevron-down";
 type Props = {
   darkModeEnabled: boolean,
   optionalStyle?: string,
-  dropdownOptions: string[],
+  dropdownOptions: {label: string, linkUrl: string}[],
   children?: React.ReactNode;
 };
 
@@ -26,8 +26,8 @@ const NavBarDropdown = ({ darkModeEnabled, optionalStyle, dropdownOptions, child
   };
   
   const dropdownOptionItems = dropdownOptions.map((option, index) => {
-    return <NavBarOption key={index} darkModeEnabled={darkModeEnabled} optionalStyle={"border-t-2"}>
-      {option}
+    return <NavBarOption key={index} linkUrl={option.linkUrl} optionalStyle={"border-t-2"}>
+      {option.label}
     </NavBarOption>
   });
 
