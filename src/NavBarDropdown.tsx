@@ -8,22 +8,13 @@ import NavBarOption from "./NavBarOption";
 const chevronIcon : IconProp = "fa-solid fa-chevron-down";
 
 type Props = {
-  darkModeEnabled: boolean,
   optionalStyle?: string,
   dropdownOptions: {label: string, linkUrl: string}[],
   children?: React.ReactNode;
 };
 
-const NavBarDropdown = ({ darkModeEnabled, optionalStyle, dropdownOptions, children }: Props) => {
+const NavBarDropdown = ({ optionalStyle, dropdownOptions, children }: Props) => {
   const [ isHovered, setIsHovered ] = useState(false);
-
-  const colorSettings = darkModeEnabled ? {
-    base: "border-blue-600 hover:bg-indigo-500",
-    list: "border-blue-600 shadow-[-2px_0_0_0_rgba(37,99,235,1)]"
-  } : {
-    base: "border-amber-600 hover:bg-rose-400",
-    list: "border-amber-600 shadow-[-2px_0_0_0_rgba(217,119,6,1)]"
-  };
   
   const dropdownOptionItems = dropdownOptions.map((option, index) => {
     return <NavBarOption key={index} linkUrl={option.linkUrl} optionalStyle={"border-t-2"}>
@@ -34,8 +25,7 @@ const NavBarDropdown = ({ darkModeEnabled, optionalStyle, dropdownOptions, child
   return (
     <li 
       className={clsx(
-        "flex flex-col px-3 py-1 cursor-pointer list-none font-semibold relative box-content",
-        colorSettings.base, 
+        "flex flex-col px-3 py-1 cursor-pointer list-none font-semibold relative dark:bg-blue-950 dark:border-blue-600 dark:hover:bg-violet-950 bg-amber-400 border-amber-600 hover:bg-rose-400",
         optionalStyle
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -49,10 +39,7 @@ const NavBarDropdown = ({ darkModeEnabled, optionalStyle, dropdownOptions, child
             />      
       </div>
       {isHovered &&
-        <ul className={clsx(
-          "absolute border-r-2 border-b-2 top-8 left-0 w-full box-content",
-          colorSettings.list
-        )}>
+        <ul className={"flex flex-col absolute border-r-2 border-b-2 top-8 left-0 w-full box-content dark:border-blue-600 dark:shadow-[-2px_0_0_0_rgba(37,99,235,1)] border-amber-600 shadow-[-2px_0_0_0_rgba(217,119,6,1)]"}>
           {dropdownOptionItems}
         </ul>
       }

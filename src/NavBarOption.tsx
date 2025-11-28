@@ -7,18 +7,15 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const NavBarOption = ({ darkModeEnabled, optionalStyle, children }: Props) => {
-    const colorSettings = darkModeEnabled ? "bg-blue-950  border-blue-600 hover:bg-indigo-500" : "bg-amber-400 border-amber-600 hover:bg-rose-400";
-    // hover:text-slate-800
-    
-    return <li className={clsx(
-      "px-3 py-1 cursor-pointer list-none font-semibold",
-      colorSettings,
-      optionalStyle
-    )}>
-        {children}
-
-    </li>
+const NavBarOption = ({ linkUrl, optionalStyle, children }: Props) => {
+    return <Link to={linkUrl} className={clsx(
+        "group px-3 py-1 cursor-pointer list-none dark:bg-blue-950 dark:border-blue-600 dark:hover:bg-violet-950 bg-amber-400 border-amber-600 hover:bg-rose-400",
+        optionalStyle
+      )}>
+        <span className="font-semibold text-amber-800 dark:text-blue-200 dark:group-hover:text-amber-200">
+          {children}
+        </span>
+      </Link>
 };
 
 export default NavBarOption;
