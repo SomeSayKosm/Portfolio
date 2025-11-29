@@ -25,7 +25,7 @@ const NavBarDropdown = ({ optionalStyle, dropdownOptions, children }: Props) => 
   return (
     <li 
       className={clsx(
-        "flex flex-col px-3 py-1 cursor-pointer list-none font-semibold relative dark:bg-blue-950 dark:border-blue-600 dark:hover:bg-violet-950 bg-amber-400 border-amber-600 hover:bg-rose-400",
+        "flex flex-col px-3 py-1 cursor-pointer list-none font-semibold relative text-text-1 border-accent-1 hover:bg-hover-fill-1 hover:text-hover-text-1",
         optionalStyle
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -39,7 +39,7 @@ const NavBarDropdown = ({ optionalStyle, dropdownOptions, children }: Props) => 
             />      
       </div>
       {isHovered &&
-        <ul className={"flex flex-col absolute border-r-2 border-b-2 top-8 left-0 w-full box-content dark:border-blue-600 dark:shadow-[-2px_0_0_0_rgba(37,99,235,1)] border-amber-600 shadow-[-2px_0_0_0_rgba(217,119,6,1)]"}>
+        <ul className={"flex flex-col absolute top-8 left-0 w-full box-content border-r-2 border-b-2  border-accent-1 shadow-[-2px_0_0_0_var(--color-accent-1)] bg-foreground"}>
           {dropdownOptionItems}
         </ul>
       }

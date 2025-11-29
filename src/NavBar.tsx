@@ -8,7 +8,7 @@ type Props = {
 };
 
 const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
-    return <nav className="flex justify-between border-2 w-full sticky top-0 select-none dark:bg-blue-950 dark:text-slate-300 dark:border-blue-600 bg-amber-400 text-slate-800 border-amber-600">
+    return <nav className="flex justify-between border-2 w-full sticky top-0 select-none bg-fill-1 border-accent-1">
         <ul className="flex justify-start">
             <NavBarOption linkUrl={"/about"} optionalStyle={"border-r-2"}>About Me</NavBarOption>
             <NavBarOption linkUrl={"/a-game-in-the-life"}>A Game in the Life</NavBarOption>

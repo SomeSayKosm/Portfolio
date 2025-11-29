@@ -9,10 +9,10 @@ type Props = {
 
 const NavBarOption = ({ linkUrl, optionalStyle, children }: Props) => {
     return <Link to={linkUrl} className={clsx(
-        "group px-3 py-1 cursor-pointer list-none dark:bg-blue-950 dark:border-blue-600 dark:hover:bg-violet-950 bg-amber-400 border-amber-600 hover:bg-rose-400",
+        "px-3 py-1 cursor-pointer list-none bg-fill-1 border-accent-1 hover:bg-hover-fill-1 group",
         optionalStyle
       )}>
-        <span className="font-semibold text-amber-800 dark:text-blue-200 dark:group-hover:text-amber-200">
+        <span className="font-semibold text-text-1 group-hover:text-hover-text-1">
           {children}
         </span>
       </Link>
