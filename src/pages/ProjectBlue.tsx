@@ -1,4 +1,4 @@
-import PostCard from '../PostCard';
+import PostCard from '../shared/PostCard';
 
 const PostCardData = {
   title: "Test Title",
