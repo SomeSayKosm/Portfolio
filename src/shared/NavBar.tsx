@@ -10,7 +10,7 @@ type Props = {
 const dropdownOptions = [{ label: "Project: Blue", linkUrl: "/project-blue" }, { label: "two", linkUrl: "/test" }];
 
 const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
-    return <nav className="flex justify-between border-2 w-full sticky top-0 select-none bg-fill-1 border-accent-1">
+    return <nav className="flex justify-between w-full sticky top-0 select-none bg-secondary-3 border-2 border-secondary-accent">
         <ul className="flex justify-start">
             <NavBarOption linkUrl={"/about"} optionalStyle={"border-r-2"}>About Me</NavBarOption>
             <NavBarOption linkUrl={"/a-game-in-the-life"}>A Game in the Life</NavBarOption>

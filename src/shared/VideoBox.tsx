@@ -11,7 +11,7 @@ const VideoBox = (props: VideoBoxProps) => {
 
     return (
         <div className="mb-2 p-1 bg-accent-2 border-0 border-accent-2 w-fit rounded-lg">
-            <div className="border-0 border-accent-2 w-fit rounded-lg overflow-hidden">
+            <div className="border-2 border-primary-accent w-fit rounded-lg overflow-hidden">
                 <iframe 
                     width="560" 
                     height="315" 

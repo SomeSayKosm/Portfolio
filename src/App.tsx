@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col w-screen items-center justify-start bg-backdrop transition-colors duration-300">
+      <div className="flex flex-col w-screen items-center justify-start bg-background transition-colors duration-300">
         <div className="max-w-6xl w-full min-h-[2000px] bg-foreground">
           <div className="h-64 text-center">Banner Placeholder</div>
           <NavBar darkModeEnabled={darkModeEnabled} setDarkModeEnabled={setDarkModeEnabled} />

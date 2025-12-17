@@ -3,56 +3,55 @@
 /* ------------------------------------------------------------------------------------------------- */
 
 @theme {
-  --color-backdrop: oklch(25.7% 0.09 281.288); /* indigo-950 */
-  --color-foreground: oklch(98.7% 0.022 95.277); /* amber-50 */
-
-
-  /* fills */
-  --color-fill-1: oklch(82.8% 0.189 84.429); /* amber-400 */
-  --color-fill-2: oklch(92.4% 0.12 95.746); /* amber-200 */
+  --color-primary-1: #FFE5A1;
+  --color-primary-2: #FFCF53;
+  --color-primary-3: #E1A300;
+  --color-primary-4: #4A3500;
+  --color-primary-accent: #FFB800;
   
-  --color-hover-fill-1: oklch(50.5% 0.213 27.518); /* red-700 */
+  --color-secondary-1: #FFC8A1;
+  --color-secondary-2: #FF9A53;
+  --color-secondary-3: #E15D00;
+  --color-secondary-4: #4A1F00;  
+  --color-secondary-accent: #FF6A00;
   
-  /* accents */
-  --color-accent-1: oklch(66.6% 0.179 58.318); /* amber-600 */
-  --color-accent-2: oklch(66.6% 0.179 58.318); /* amber-600 */
-  --color-accent-3: oklch(76.9% 0.188 70.08); /* amber-500 */
+  --color-tertiary-1: #E11F00;
+  
+  --color-background: #4A1F00; /* secondary-4 */
+  --color-foreground: #FFE5A1; /* primary-1 */
 
-  /* text */
-  --color-text-1: oklch(47.3% 0.137 46.201); /* amber-800 */
-  --color-text-2: oklch(26.6% 0.079 36.259); /* orange-950 */
-  --color-text-3: oklch(47% 0.157 37.304); /* orange-800 */
+  --color-hover: #FFC8A1;       /* secondary-1 */
+  --color-hover-text: #E15D00; /* secondary-3 */
 
-  --color-hover-text-1: oklch(97.1% 0.013 17.38); /* red-50 */
-
+  --color-primary-text: #4A3500;    /* primary-4 */
+  --color-secondary-text: #E15D00; /* secondary-3 */
 }
 
 @layer theme {
   :root, :host {
     @variant dark {
-      --color-backdrop: oklch(12.9% 0.042 264.695); /* slate-950 */
-      --color-foreground: oklch(29.3% 0.066 243.157); /* sky-950 */
+      --color-primary-1: #D8DCFC;
+      --color-primary-2: #041489;
+      --color-primary-3: #020F6D;
+      --color-primary-4: #010734;
+      --color-primary-accent: #142DEB;
       
-
-      /* fills */
-      --color-fill-1: oklch(28.2% 0.091 267.935); /* blue-950 */
-      --color-fill-2: oklch(37.9% 0.146 265.522); /* blue-900 */
-
-      --color-hover-fill-1: oklch(28.3% 0.141 291.089); /* violet-950 */
-
-
-      /* accents */
-      --color-accent-1: oklch(54.6% 0.245 262.881); /* blue-600 */
-      --color-accent-2: oklch(71.5% 0.143 215.221); /* cyan-500 */
-      --color-accent-3: oklch(60.9% 0.126 221.723); /* cyan-600 */
+      --color-secondary-1: #E4D6FC;
+      --color-secondary-2: #340388;
+      --color-secondary-3: #29026C;
+      --color-secondary-4: #130034;  
+      --color-secondary-accent: #5F0FEA;
       
-
-      /* text */
-      --color-text-1: oklch(88.2% 0.059 254.128); /* blue-200 */
-      --color-text-2: oklch(92.9% 0.013 255.508); /* slate-200 */
-      --color-text-3: oklch(78.5% 0.115 274.713); /* indigo-300 */
+      --color-tertiary-1: #079EE7;
       
-      --color-hover-text-1: oklch(92.4% 0.12 95.746); /* amber-200 */
+      --color-background: #010734;  /* primary-4 */
+      --color-foreground: #020F6D;  /* primary-3 */
+
+      --color-hover: #E4D6FC;       /* secondary-2 */
+      --color-hover-text: #5F0FEA;  /* secondary-accent */
+
+      --color-primary-text: #D8DCFC;    /* primary-1 */
+      --color-secondary-text: #079EE7;  /* tertiary-1 */
     }
   }
 }
