@@ -1,3 +1,5 @@
+import VideoBox from "./VideoBox";
+
 type Props = {
     data: {
         title: string,
@@ -17,6 +19,7 @@ const PostCard = ({data}: Props) => {
                     {data.date}
                 </div>
                 <div className="text-text-2">
+                    <VideoBox src="" title="" />
                     {data.content}
                 </div>
             </div>

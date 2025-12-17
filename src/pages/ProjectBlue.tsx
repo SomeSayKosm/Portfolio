@@ -8,10 +8,12 @@ const PostCardData = {
 
 const ProjectBlue = () => {
   return (
+    <>
         <PostCard 
-        data={PostCardData}
+          data={PostCardData}
         />
-    );
+    </>
+  );
 };
 
 export default ProjectBlue;
