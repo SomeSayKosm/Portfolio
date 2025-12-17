@@ -18,9 +18,9 @@ const PostCard = ({data}: Props) => {
                 <div className="text-sm font-semibold mb-4 text-secondary-text">
                     {data.date}
                 </div>
-                <div className="text-primary-text">
+                <div className="text-primary-text flow-root">
                     <VideoBox src="" title="" />
-                    {data.content}
+                    <p>{data.content}</p>
                 </div>
             </div>
         </div>
