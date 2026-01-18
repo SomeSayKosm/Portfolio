@@ -7,7 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import NavBar from './shared/NavBar';
 import ProjectBlue from './pages/ProjectBlue';
-
+import ProjectBlueBanner from './pages/ProjectBlueBanner';
 
 library.add(fas, far, fab)
 
@@ -18,7 +18,12 @@ function App() {
     <>
       <div className="flex flex-col w-screen items-center justify-start bg-background transition-colors duration-300">
         <div className="max-w-6xl w-full min-h-[2000px] bg-foreground">
-          <div className="h-64 text-center">Banner Placeholder</div>
+          <Routes>
+            <Route path="/about" element={<div className="h-64 text-center">Banner About</div>} />
+            <Route path="/a-game-in-the-life" element={<div className="h-64 text-center">Banner Game</div>} />
+            <Route path="/test" element={<div className="h-64 text-center">Banner Test</div>} />
+            <Route path="/project-blue" element={<ProjectBlueBanner />} />
+          </Routes>
           <NavBar darkModeEnabled={darkModeEnabled} setDarkModeEnabled={setDarkModeEnabled} />
           <Routes>
             <Route path="/about" element={<div className="max-w-6xl w-full min-h-[2000px] p-4">About Me Page Placeholder</div>} />
