@@ -1,16 +1,18 @@
+import clsx from "clsx";
+
 type VideoBoxProps = {
     src: string,
     title: string,
+    rightAligned?: boolean,
 };
 
 const VideoBox = (props: VideoBoxProps) => {
-    let { src, title } = props;
-
-    src = "https://www.youtube.com/embed/HOFfTBZYNVs?si=0bjanA0SwRE5AA3K"; // Placeholder
-    title = "Project Blue: Dev Vlog #1";
+    let { src, title, rightAligned } = props;
 
     return (
-        <div className="mb-2 mr-6 w-fit rounded-lg float-left">
+        <div className={clsx("mt-1 mb-2 w-fit rounded-lg",
+            rightAligned ? "float-right ml-6" : "float-left  mr-6"
+         )}>
             <div className="border-2 border-primary-accent w-fit rounded-lg overflow-hidden">
                 <iframe 
                     width="560" 

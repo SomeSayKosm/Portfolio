@@ -9,9 +9,13 @@ const PostCardData = {
 const ProjectBlue = () => {
   return (
     <>
+      { 
+        PostCardData.map((postData, index) => (
         <PostCard 
-          data={PostCardData}
+            key={index} data={postData} rightAligned={index % 2 === 1 ? true : false}
         />
+        ))
+      }
     </>
   );
 };
