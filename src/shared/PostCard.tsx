@@ -17,14 +17,27 @@ type Props = {
 
 
 const PostCard = ({data, rightAligned}: Props) => {
+    const hasText = data.content && data.content.length > 0;
 
+    const getAlignmentClass = (rightAligned: boolean | undefined) => {
+        if(!hasText) {
+            return "justify-center";
+        }
+
+        return rightAligned ? "float-right ml-6" : "float-left mr-6";
+    }
+    
     const graphicContent = (
-        data.video && 
-            <VideoBox 
-                src={data.video.src} 
-                title={data.video.title} 
-                rightAligned={rightAligned ? false : true} 
-            />
+        data.video &&
+            <div className={clsx("mt-1 mb-2 w-fit rounded-lg",
+                getAlignmentClass(rightAligned)
+            )}>
+                <VideoBox 
+                    src={data.video.src} 
+                    title={data.video.title} 
+                    isLarge={!hasText}
+                />
+            </div>
     )
 
     return (
@@ -40,9 +53,10 @@ const PostCard = ({data, rightAligned}: Props) => {
                 )}>
                     {data.date}
                 </div>
-                <div className="text-primary-text flow-root">
+                <div className={clsx("text-primary-text", 
+                    hasText ? "flow-root" :  "flex justify-center")}>
                     {graphicContent}
-                    <p className="whitespace-pre-wrap">{data.content}</p>
+                    {hasText && <p className="whitespace-pre-wrap">{data.content}</p>}
                 </div>
             </div>
         </div>
