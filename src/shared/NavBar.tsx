@@ -7,7 +7,7 @@ type Props = {
     setDarkModeEnabled: (darkModeEnabled: boolean) => void,
 };
 
-const dropdownOptions = [{ label: "Project: Blue", linkUrl: "/project-blue" }, { label: "two", linkUrl: "/test" }];
+const dropdownOptions = [{ label: "Project: Blue", linkUrl: "/project-blue" }, { label: "Project: Kickstep", linkUrl: "/project-kickstep" }];
 
 const NavBar = ({darkModeEnabled, setDarkModeEnabled}: Props) => {
     return <nav className="flex justify-between w-full sticky top-0 select-none bg-secondary-3 border-2 border-secondary-accent">

@@ -8,6 +8,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import NavBar from './shared/NavBar';
 import ProjectBlue from './pages/ProjectBlue';
 import ProjectBlueBanner from './pages/ProjectBlueBanner';
+import ProjectKickstep from './pages/ProjectKickstep';
+import ProjectKickstepBanner from './pages/ProjectKickstepBanner';
 
 library.add(fas, far, fab)
 
@@ -21,15 +23,15 @@ function App() {
           <Routes>
             <Route path="/about" element={<div className="h-64 text-center">Banner About</div>} />
             <Route path="/a-game-in-the-life" element={<div className="h-64 text-center">Banner Game</div>} />
-            <Route path="/test" element={<div className="h-64 text-center">Banner Test</div>} />
             <Route path="/project-blue" element={<ProjectBlueBanner />} />
+            <Route path="/project-kickstep" element={<ProjectKickstepBanner />} />
           </Routes>
           <NavBar darkModeEnabled={darkModeEnabled} setDarkModeEnabled={setDarkModeEnabled} />
           <Routes>
             <Route path="/about" element={<div className="max-w-6xl w-full min-h-[2000px] p-4">About Me Page Placeholder</div>} />
             <Route path="/a-game-in-the-life" element={<div className="max-w-6xl w-full min-h-[2000px] p-4">A Game in the Life Page Placeholder</div>} />
-            <Route path="/test" element={<div className="max-w-6xl w-full min-h-[2000px] p-4">Test Page Placeholder</div>} />
             <Route path="/project-blue" element={<ProjectBlue />} />
+            <Route path="/project-kickstep" element={<ProjectKickstep />} />
           </Routes>
         </div>
       </div>
